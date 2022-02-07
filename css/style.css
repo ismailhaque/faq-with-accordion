@@ -37,7 +37,9 @@ li{
     display: flex;
     justify-content: space-between;
 }
-
+.ismail-faq .contant .header .icon.onclick{
+    transform: rotate(90deg);
+}
 .ismail-faq .contant .body{
     height: 0;
     overflow: hidden;

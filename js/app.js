@@ -6,10 +6,12 @@ header.forEach(item => {
     item.addEventListener(`click`, function () {
         
         header.forEach(item => {
-            item.nextElementSibling.classList.remove(`active`);
-            item.lastElementChild.style.transform = `rotate(0deg)`;
+            if ( item != this ) {
+                item.nextElementSibling.classList.remove(`active`);
+                item.lastElementChild.classList.remove(`onclick`);
+            }
         });
-        item.nextElementSibling.classList.add(`active`);
-        item.lastElementChild.style.transform = `rotate(90deg)`;
+        item.nextElementSibling.classList.toggle(`active`);
+        item.lastElementChild.classList.toggle(`onclick`);
     })
 });
